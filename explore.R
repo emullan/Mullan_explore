@@ -1,3 +1,6 @@
+##Prof G: Nice work but your function header comments should be more
+##Prof G: and formatted so its easier to find paramters and return info.
+
 data(diamonds)
 data(mtcars)
 require("ggplot2")
@@ -119,6 +122,8 @@ explore <- function(df,bins,thresh)
   biglist <- list(freqtab, stats, rsdata, corrdata) #returns list of outputs from last 4 functions
   return(biglist)
 }
-explore(diamonds,c(5,20,50),.25)
+myframe <- explore(diamonds,c(5,20,50),.25)
 explore(mtcars,c(5,20,50),.25)
 
+for (i in 1:length(myframe)) {print(myframe[i])}
+str(myframe)
